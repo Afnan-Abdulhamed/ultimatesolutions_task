@@ -11,5 +11,10 @@
 |
 */
 
+// Route with view
+Route::get('/', function () {
+    return view('welcome', ['percentage' => '100']);
+});
+
 // Route with controller
-Route::get('/', 'HomeController@percentage');
+Route::get('/projects/{id}', 'HomeController@percentage');
